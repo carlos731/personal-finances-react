@@ -18,21 +18,21 @@ export const Input = styled.input<{ $borderRadius?: 'sm' | 'md' }>`
     background-color: ${props => props.theme.COLORS.inputBackground};
     color: ${props => props.theme.COLORS.inputColor};
     border: 1px solid ${props => props.theme.COLORS.inputBorderColor};
-    outline-none: none;
+    outline: none;
     padding: 11px 20px;
     box-sizing: border-box;
     transition: all .3s;
-    border-radius: ${props => props.$borderRadius == 'sm' ? '4px' : '40px'}
+    border-radius: ${props => props.$borderRadius == 'sm' ? '4px' : '40px'};
 
-    $::placeholder {
+    &::placeholder {
         color: ${props => props.theme.COLORS.inputPlaceholderColor};
     }
 
-    $:hover {
+    &:hover {
         background-color: ${props => props.theme.COLORS.inputBackgroundHover};
     }
 
-    $:focus {
+    &:focus {
         border-color: ${props => props.theme.COLORS.inputBorderColorFocus};
     }
 `
